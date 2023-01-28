@@ -33,7 +33,14 @@ const tareaSchema = mongoose.Schema({
     proyecto: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Proyecto'
-    }
+    },
+
+    completado: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Usuario', 
+        default:null,
+    },
+
 }, {
     timestamps: true
 })
